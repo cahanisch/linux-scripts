@@ -4,7 +4,7 @@ IFS=","
 FILES=*.csv
 for FILE in $FILES
 do
-    GROUP=$(echo $FILE | cut -d "." -f 1 )
+    GROUP=$(echo $FILE | cut -d "." -f 1)
     GEXIST=$(cat /etc/group | cut -d ":" -f 1 | grep -c $GROUP)
     if [ "$GEXIST" -eq 0 ];
     then
